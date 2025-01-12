@@ -3,59 +3,79 @@ import { Home, Zap, Users, HelpCircle, BarChart2, TestTube, Bell } from 'lucide-
 
 function Navbar() {
   return (
-    <nav className="bg-[#1F2937] px-6 py-3">
-      <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-8">
+    <nav className="bg-[#1E2330] border-b border-gray-800">
+      <div className="max-w-[1400px] mx-auto h-[60px] px-6 flex items-center justify-between">
+        <div className="flex items-center space-x-10">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
             <svg
               viewBox="0 0 24 24"
-              className="w-8 h-8 text-teal-400"
+              className="w-7 h-7 text-[#16B8B8]"
               fill="currentColor"
             >
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
             </svg>
-            <span className="text-white text-xl font-semibold">Firstbench</span>
+            <span className="text-white text-lg font-medium">Firstbench</span>
           </a>
 
           {/* Navigation Links */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <a href="/dashboard" className="flex items-center text-gray-300 hover:text-white transition-colors">
-              <Home className="w-4 h-4 mr-2" />
+          <div className="hidden lg:flex items-center space-x-8">
+            <a 
+              href="/dashboard" 
+              className="flex items-center text-gray-300 hover:text-white transition-colors text-sm"
+            >
+              <Home className="w-[18px] h-[18px] mr-2 opacity-80" />
               <span>Dashboard</span>
             </a>
-            <a href="/firstguru" className="flex items-center text-gray-300 hover:text-white transition-colors">
-              <Zap className="w-4 h-4 mr-2" />
+            <a 
+              href="/firstguru" 
+              className="flex items-center text-gray-300 hover:text-white transition-colors text-sm"
+            >
+              <Zap className="w-[18px] h-[18px] mr-2 opacity-80" />
               <span>FirstGuru</span>
             </a>
-            <a href="/townhall" className="flex items-center text-gray-300 hover:text-white transition-colors">
-              <Users className="w-4 h-4 mr-2" />
+            <a 
+              href="/townhall" 
+              className="flex items-center text-gray-300 hover:text-white transition-colors text-sm"
+            >
+              <Users className="w-[18px] h-[18px] mr-2 opacity-80" />
               <span>TownHall</span>
             </a>
-            <a href="/ai-evaluation" className="flex items-center text-gray-300 hover:text-white transition-colors">
-              <HelpCircle className="w-4 h-4 mr-2" />
+            <a 
+              href="/ai-evaluation" 
+              className="flex items-center text-gray-300 hover:text-white transition-colors text-sm"
+            >
+              <HelpCircle className="w-[18px] h-[18px] mr-2 opacity-80" />
               <span>AI Evaluation</span>
             </a>
-            <a href="/performance" className="flex items-center text-gray-300 hover:text-white transition-colors">
-              <BarChart2 className="w-4 h-4 mr-2" />
+            <a 
+              href="/performance" 
+              className="flex items-center text-gray-300 hover:text-white transition-colors text-sm"
+            >
+              <BarChart2 className="w-[18px] h-[18px] mr-2 opacity-80" />
               <span>Performance</span>
             </a>
           </div>
         </div>
 
         {/* Right Side Items */}
-        <div className="flex items-center space-x-4">
-          <button className="hidden md:flex items-center text-teal-400 border border-teal-400 px-3 py-1 rounded hover:bg-teal-400/10 transition-colors">
-            <TestTube className="w-4 h-4 mr-2" />
+        <div className="flex items-center space-x-6">
+          <button className="hidden md:flex items-center text-[#16B8B8] hover:text-[#16B8B8] hover:bg-[#16B8B8]/10 px-4 py-1.5 rounded-md transition-colors text-sm">
+            <TestTube className="w-[18px] h-[18px] mr-2" />
             Mock Test
           </button>
           <button className="text-gray-300 hover:text-white transition-colors">
             <Bell className="w-5 h-5" />
           </button>
-          <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 bg-pink-600 rounded-full flex items-center justify-center text-white font-semibold">
-              P
-            </div>
+          <div className="flex items-center">
+            <button className="flex items-center space-x-2 rounded-md hover:bg-white/5 px-2 py-1.5 transition-colors">
+              <div className="h-7 w-7 bg-[#F472B6] rounded-md flex items-center justify-center text-white text-sm font-medium">
+                P
+              </div>
+              <svg className="w-4 h-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
